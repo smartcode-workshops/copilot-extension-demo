@@ -1,33 +1,25 @@
-# SmartCode Lite DEMO
+# SmartCode Devi Agent DEMO
 
-SmartCode Lite 是由 leansoftx.com 开发的AI辅助软件工程（AISE）系统的重要组件，也是 SmartIDE 的全新产品形态，可以为开发人员提供对软件研发过程中各阶段的AI辅助能力。
+本演示代码库并非SmartCode Devi Agent的真实代码，是为了帮助开发者了解 SmartCode 产品特性而提供的示例/培训代码库。当前主要提供GitHub Copilot智能体扩展开发的示例代码，同时提供了详细的动手实验手册供开发者了解GitHub Copilot扩展的工作机制和开发技巧。
 
-SmartCode Lite 是 SmartCode 的轻量级面向大众开发者版本，为开发者提供贴近开发环境的AI辅助能力。
+开发者可以使用本代码库了解体验 SmartCode Devi Agent 的产品能力，同时也可以用来学习开发GitHub Copilot 智能体的基本技能。
 
-本演示代码库并非SmartCode Lite的真实代码，是为了帮助开发者了解 SmartCode 产品特性而提供的示例/培训代码库。当前主要提供SmartCode for GitHub Copilot智能体扩展开发的示例代码，同时提供了详细的动手实验手册供开发者了解GitHub Copilot扩展的工作机制和开发技巧。
+## Devi for GitHub Copilot (DB Agent) 数据库智能体
 
-开发者可以使用本代码库了解体验 SmartCode 的产品能力，同时也可以用来学习开发GitHub Copilot 智能体的基本技能。
+Devi for GitHub Copilot (DB Agent) 数据库智能体允许用户通过特定的智能体标签（@devi)在GitHub Copilot Chat中进行调用，通过对数据库结构进行向量化索引，Devi数据库智能体可以根据用户的问题自动定位相关数据库对象并将这些对象的描述整理成适合GitHub Copilot理解的上下文信息，最终利用GitHub Copilot后台的 GPT3.5 或者 GPT4 模型为用户生成答案。
 
-## SmartCode for GitHub 数据库智能体
+B站演示视频链接：[代维(devi)数据库智能体 - GitHub Copilot扩展， 数据库智能问答，文本生成SQL脚本，一键生成数据库文档](https://www.bilibili.com/video/BV1XmsLepEdR)
 
-SmartCode for GitHub 数据库智能体允许用户通过特定的智能体标签（@smartcode-db)在GitHub Copilot Chat中进行调用，通过对数据库结构进行向量化索引，SmartCode数据库智能体可以根据用户的问题自动定位相关数据库对象并将这些对象的描述整理成适合GitHub Copilot理解的上下文信息，最终利用GitHub Copilot后台的 GPT3.5 或者 GPT4 模型为用户生成答案。
-
-B站演示视频链接：[国内首款GitHub Copilot智能体 SmartCode发布，构建更懂你的编程助手](https://www.bilibili.com/video/BV1Ps42137rf)
-
-![](./smartcode-poster.png)
+Devi 已经发布到 VSCode Marketplace [下载链接](https://marketplace.visualstudio.com/items?itemName=leansoftx.leansoftx-devi-copilot)
 
 具体特性列表如下：
 
 - 数据库问答智能体
-- 在GitHub Copilot Chat中通过 @smartcode-db 调起 SmartCode数据库智能体
+- 在GitHub Copilot Chat中通过 @devi 调起 Devi数据库智能体
 - 使用 query, schema, docs 三个快捷指令完成常见数据库任务
   - query: 通过自然语言生成 SQL脚本
   - schema: 针对数据库结构进行问答
   - docs: 为数据库生成文档，辅助代码生成
-
-SmartCode 数据库智能体工作原理图：
-
-![SmartCode 数据库智能体工作原理图](smartcode-agent.png)
 
 ## 实验环境
 
@@ -35,7 +27,7 @@ GitHub Copilot 智能体 能力当前仍然处于预览版状态，因此我们�
 
 以下列出完成本实验的前置条件，请希望参与动手实验的开发人员确保自己的开发环境满足要求：
 
-1. Visual Studio Code Insider 1.90版本以上 下载地址 https://code.visualstudio.com/insiders/
+1. Visual Studio Code 1.90版本以上 下载地址 https://code.visualstudio.com/
 2. GitHub Copilot 账号
 3. Node.js 开发环境，建议 Node 20 以上版本
 
@@ -50,12 +42,6 @@ GitHub Copilot 智能体 能力当前仍然处于预览版状态，因此我们�
   - [02 数据库基本问答](./docs/lab01/02-basic-qa.md)
   - [03 生成数据库结构化文档](./docs/lab01/03-generate-docs.md)
   - [04 利用数据库问答结果提高代码生成准确率](./docs/lab01/04-generate-code.md)
-
-## 内测申请
-
-SmartCode Lite 正在招募首批内测用户，请扫码加入我们的内测计划。我们会会在近期和您取得联系。
-
-![](./smartcode-waitinglist.png)
 
 ## 版权
 
